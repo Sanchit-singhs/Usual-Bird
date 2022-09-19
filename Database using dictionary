@@ -1,0 +1,35 @@
+
+ceredentials = {"Sanchit Singh": {"Password": 12345, "email": "sanchitsingh849@gmail.com", "Phone no.": 8700197911},
+                "San": {"Password": 12345, "email": "sanchitsingh849@gmail.com", "Phone no.": 8700197911}}
+a = input("For Sign in enter 1\nFor Sign up enter 2: ")
+if a == '1':
+    x = input("Enter user id: ")
+    while x not in ceredentials.keys():
+        print("No user Exist")
+        x = input("enter User Id: ")
+
+    else:
+        y = int(input("Enter the password: "))
+        while y != ceredentials[x]["Password"]:
+            print("Wrong Password")
+            y = int(input("Enter the password: "))
+
+        else:
+            print("Hello {} Welcome User".format(x))
+            print("Your Phone ", ceredentials[x]["Phone no."])
+
+elif a == '2':
+    username = input("Enter your name: ")
+    password = int(input("Enter your password: "))
+    email = input("Enter your email: ")
+    Phoneno =  int(input("Enter your Phone no.: "))
+    ceredentials[username] = {}
+    ceredentials[username]["Password"] = password
+    ceredentials[username]["email"] = email
+    ceredentials[username]["Phone no."] = Phoneno
+    print(ceredentials)
+else:
+    print("Wrong Choice")
+
+
+
